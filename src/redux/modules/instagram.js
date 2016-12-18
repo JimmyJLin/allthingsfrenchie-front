@@ -33,12 +33,12 @@ export default function instagram(state = initialState, action = {}) {
 }
 
 export function isLoaded(globalState) {
-  return globalState.instagram && globalState.instagram.loaded;
+  return globalState.info && globalState.info.loaded;
 }
 
 export function load() {
   return {
     types: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
-    promise: (client) => client.get('/loadInfo')
+    promise: (client) => client.get('/v1/users/self/media/recent/?access_token=2220345295.1677ed0.995fccc0ee1d47b4acb850aff67d534d')
   };
 }

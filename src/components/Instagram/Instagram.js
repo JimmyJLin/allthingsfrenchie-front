@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {load} from 'redux/modules/info';
+import {load} from 'redux/modules/instagram';
 
 @connect(
     state => ({info: state.info.data}),
@@ -13,16 +13,33 @@ export default class Instagram extends Component {
   }
 
   render() {
-    const {info, load} = this.props; // eslint-disable-line no-shadow
-    const styles = require('./InfoBar.scss');
+    const {info} = this.props; // eslint-disable-line no-shadow
+    const instagramData = info.data;
+    const instagramImgs = instagramData.map((post) => {
+      const url = post.images.standard_resolution.url;
+      return (
+        <div key={url} className="col-xs-4 col-sm-3">
+          <img src={url} alt=""/>
+        </div>
+      );
+    });
+    const styles = require('./Instagram.scss');
     return (
-      <div className={styles.infoBar + ' well'}>
-        <div className="container">
-          This is an info bar
-          {' '}
-          <strong>{info ? info.message : 'no info!'}</strong>
-          <span className={styles.time}>{info && new Date(info.time).toString()}</span>
-          <button className="btn btn-primary" onClick={load}>Reload from server</button>
+      <div className={styles.instagram}>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-3"></div>
+            <div className="col-md-6">
+              <h3 className={styles.header} align="center"><a href="https://www.instagram.com/allthingsfrenchie_shop/"><span>Follow us on Instagram</span></a></h3>
+            </div>
+            <div className="col-md-3"></div>
+          </div>
+          <br/>
+          <div className={styles.instagramContainer}>
+            <div className="row">
+              {instagramImgs}
+            </div>
+          </div>
         </div>
       </div>
     );
