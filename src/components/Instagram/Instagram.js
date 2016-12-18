@@ -13,24 +13,27 @@ export default class Instagram extends Component {
   }
 
   render() {
+    const instagramIcon = require('./instagram.png');
+    const styles = require('./Instagram.scss');
     const {info} = this.props; // eslint-disable-line no-shadow
     const instagramData = info.data;
     const instagramImgs = instagramData.map((post) => {
-      const url = post.images.standard_resolution.url;
+      const id = post.id;
+      const urlLinks = post.link;
+      const imgUrl = post.images.standard_resolution.url;
       return (
-        <div key={url} className="col-xs-4 col-sm-3">
-          <img src={url} alt=""/>
+        <div key={id} className="col-xs-4 col-sm-3">
+          <a href={urlLinks} target="_blank"><img src={imgUrl} alt=""/></a>
         </div>
       );
     });
-    const styles = require('./Instagram.scss');
     return (
       <div className={styles.instagram}>
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-3"></div>
             <div className="col-md-6">
-              <h3 className={styles.header} align="center"><a href="https://www.instagram.com/allthingsfrenchie_shop/"><span>Follow us on Instagram</span></a></h3>
+              <h3 className={styles.header} align="center"><a href="https://www.instagram.com/allthingsfrenchie_shop/"><img src={instagramIcon} alt=""/><span>Follow us on Instagram</span></a></h3>
             </div>
             <div className="col-md-3"></div>
           </div>
