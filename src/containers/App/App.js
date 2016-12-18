@@ -8,7 +8,7 @@ import NavItem from 'react-bootstrap/lib/NavItem';
 import Helmet from 'react-helmet';
 import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
 import { logout } from 'redux/modules/auth';
-import { Footer } from 'components';
+import { Footer, Message } from 'components';
 import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
@@ -90,7 +90,9 @@ export default class App extends Component {
           {this.props.children}
         </div>
         {/* App Content - ends */}
-
+        <Message/>
+        <br/>
+        <br/>
         <Footer/>
 
       </div>

@@ -14,3 +14,4 @@ export WidgetForm from './old/WidgetForm/WidgetForm';
 // allthingsfrenchie
 export Footer from './Footer/Footer';
 export Instagram from './Instagram/Instagram';
+export Message from './Message/Message';
