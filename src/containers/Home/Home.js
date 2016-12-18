@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Instagram } from 'components';
 import Helmet from 'react-helmet';
 
 export default class Home extends Component {
@@ -17,6 +18,8 @@ export default class Home extends Component {
         <div className="container">
           <h2> Main Page Content goes here </h2>
         </div>
+
+        <Instagram />
       </div>
     );
   }

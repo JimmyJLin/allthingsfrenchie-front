@@ -125,6 +125,7 @@ export default class App extends Component {
           {this.props.children}
         </div>
         {/* App Content - ends */}
+
         <Footer/>
 
       </div>
