@@ -15,6 +15,7 @@ import {
     Frenchie,
     Friends,
     Toast,
+    Profile
   } from 'containers';
 
 export default (store) => {
@@ -60,6 +61,7 @@ export default (store) => {
       <Route path="frenchie" component={Frenchie}/>
       <Route path="friends" component={Friends}/>
       <Route path="toast" component={Toast}/>
+      <Route path="profile" component={Profile}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

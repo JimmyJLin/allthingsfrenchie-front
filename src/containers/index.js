@@ -13,3 +13,4 @@ export NotFound from './NotFound/NotFound';
 export Frenchie from './Frenchie/Frenchie';
 export Friends from './Friends/Friends';
 export Toast from './Toast/Toast';
+export Profile from './Profile/Profile';

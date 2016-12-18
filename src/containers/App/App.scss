@@ -16,6 +16,10 @@
     font-size: 2em;
     line-height: 20px;
   }
+
+  a {
+    border-bottom: 0 !important;
+  }
 }
 .appContent {
   margin: 50px 0; // for fixed navbar
