@@ -12,6 +12,7 @@ import { Footer } from 'components';
 import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
+import Image from './text_logo.png';
 
 @asyncConnect([{
   promise: ({store: {dispatch, getState}}) => {
@@ -69,7 +70,9 @@ export default class App extends Component {
             <Navbar.Brand>
               <IndexLink to="/" activeStyle={{color: '#33e0ff'}}>
                 <div className={styles.brand}/>
-                <span>{config.app.title}</span>
+                <span>
+                  <img id="navbar_img" src={Image} alt="text-logo"/>
+                </span>
               </IndexLink>
             </Navbar.Brand>
             <Navbar.Toggle/>
