@@ -5,9 +5,11 @@
  *
  */
 
-export CounterButton from './CounterButton/CounterButton';
-export InfoBar from './InfoBar/InfoBar';
-export MiniInfoBar from './MiniInfoBar/MiniInfoBar';
-export SurveyForm from './SurveyForm/SurveyForm';
-export WidgetForm from './WidgetForm/WidgetForm';
+export CounterButton from './old/CounterButton/CounterButton';
+export InfoBar from './old/InfoBar/InfoBar';
+export MiniInfoBar from './old/MiniInfoBar/MiniInfoBar';
+export SurveyForm from './old/SurveyForm/SurveyForm';
+export WidgetForm from './old/WidgetForm/WidgetForm';
+
+// allthingsfrenchie
 export Footer from './Footer/Footer';
