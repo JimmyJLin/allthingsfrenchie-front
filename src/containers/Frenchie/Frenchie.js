@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Helmet from 'react-helmet';
 
-export default class About extends Component {
+export default class Frenchie extends Component {
 
   state = {
   }
@@ -9,8 +9,8 @@ export default class About extends Component {
   render() {
     return (
       <div className="container">
-        <h1>About Us</h1>
-        <Helmet title="About Us"/>
+        <h1>Frenchie's Closet</h1>
+        <Helmet title="Frenchie's Closet"/>
 
       </div>
     );
