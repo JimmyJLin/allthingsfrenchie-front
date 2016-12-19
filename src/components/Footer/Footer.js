@@ -4,6 +4,9 @@ export default class Footer extends Component {
 
   render() {
     const styles = require('./Footer.scss');
+    const facebookIcon = require('./images/facebook.png');
+    const instagram = require('./images/instagram.png');
+    const pinterest = require('./images/pinterest.png');
     return (
       <div className={styles.footer}>
         <div className="container">
@@ -38,6 +41,11 @@ export default class Footer extends Component {
             <div className="col-xs-6 col-sm-4">
               <p>Follow Us</p>
               <br/>
+              <div className={styles.social_media_icons}>
+                <a href="#" target="_blank"><img src={facebookIcon} alt="facebook icon"/></a>
+                <a href="#" target="_blank"><img src={instagram} alt="instagram icon"/></a>
+                <a href="#" target="_blank"><img src={pinterest} alt="pinterest icon"/></a>
+              </div>
 
             </div>
           </div>
