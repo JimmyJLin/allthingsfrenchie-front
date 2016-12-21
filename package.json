@@ -50,7 +50,7 @@
         "NODE_PATH": "./src",
         "NODE_ENV": "development",
         "PORT": 3000,
-        "APIPORT": 3030,
+        "APIPORT": 8080,
         "APIHOST": "api-allthingsfrenchie.herokuapp.com/api"
       }
     },
