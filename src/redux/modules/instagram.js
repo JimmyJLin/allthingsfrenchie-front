@@ -9,11 +9,13 @@ const initialState = {
 export default function instagram(state = initialState, action = {}) {
   switch (action.type) {
     case LOAD:
+      console.log('inside load');
       return {
         ...state,
         loading: true
       };
     case LOAD_SUCCESS:
+      console.log('inside load success');
       return {
         ...state,
         loading: false,
@@ -21,6 +23,7 @@ export default function instagram(state = initialState, action = {}) {
         data: action.result
       };
     case LOAD_FAIL:
+      console.log('inside load fail');
       return {
         ...state,
         loading: false,
@@ -33,12 +36,13 @@ export default function instagram(state = initialState, action = {}) {
 }
 
 export function isLoaded(globalState) {
-  return globalState.info && globalState.info.loaded;
+  return globalState.instagram && globalState.instagram.loaded;
 }
 
 export function load() {
+  console.log('inside loadInsta yayyyyy');
   return {
     types: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
-    promise: (client) => client.get('/v1/users/self/media/recent/?access_token=2220345295.1677ed0.995fccc0ee1d47b4acb850aff67d534d')
+    promise: (client) => client.get('/instagram')
   };
 }

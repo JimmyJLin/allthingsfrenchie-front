@@ -4,11 +4,11 @@ import { routerReducer } from 'react-router-redux';
 import {reducer as reduxAsyncConnect} from 'redux-async-connect';
 import { pagination } from 'violet-paginator';
 
-import auth from './auth';
-import counter from './counter';
+import auth from './modules/auth';
+import counter from './modules/counter';
 import {reducer as form} from 'redux-form';
-import info from './info';
-import widgets from './widgets';
+import instagram from './modules/instagram';
+import widgets from './modules/widgets';
 
 export default combineReducers({
   routing: routerReducer,
@@ -20,7 +20,7 @@ export default combineReducers({
     counter2: counter,
     counter3: counter
   }),
-  info,
+  instagram,
   pagination,
   widgets
 });

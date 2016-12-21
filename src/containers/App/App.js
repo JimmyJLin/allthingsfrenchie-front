@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import Helmet from 'react-helmet';
-import { isLoaded as isInfoLoaded, load as loadInfo } from 'redux/modules/info';
+import { isLoaded as isIstagramLoaded, load as loadInstagram } from 'redux/modules/info';
 import { logout } from 'redux/modules/auth';
 import { Footer, Message } from 'components';
 import { push } from 'react-router-redux';
@@ -18,8 +18,8 @@ import Image from './text_logo.png';
   promise: ({store: {dispatch, getState}}) => {
     const promises = [];
 
-    if (!isInfoLoaded(getState())) {
-      promises.push(dispatch(loadInfo()));
+    if (!isIstagramLoaded(getState())) {
+      promises.push(dispatch(loadInstagram()));
     }
     // if (!isAuthLoaded(getState())) {
     //   promises.push(dispatch(loadAuth()));

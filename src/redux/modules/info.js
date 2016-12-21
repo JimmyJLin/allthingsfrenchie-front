@@ -39,6 +39,6 @@ export function isLoaded(globalState) {
 export function load() {
   return {
     types: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
-    promise: (client) => client.get('/v1/users/self/media/recent/?access_token=2220345295.1677ed0.995fccc0ee1d47b4acb850aff67d534d')
+    promise: (client) => client.get('/instagram')
   };
 }

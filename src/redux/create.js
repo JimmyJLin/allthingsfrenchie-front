@@ -23,7 +23,7 @@ export default function createStore(history, client, data) {
     finalCreateStore = applyMiddleware(...middleware)(_createStore);
   }
 
-  const reducer = require('./modules/reducer');
+  const reducer = require('./reducer');
   if (data) {
     data.pagination = Immutable.fromJS(data.pagination);
   }
@@ -31,8 +31,8 @@ export default function createStore(history, client, data) {
 
 
   if (__DEVELOPMENT__ && module.hot) {
-    module.hot.accept('./modules/reducer', () => {
-      store.replaceReducer(require('./modules/reducer'));
+    module.hot.accept('./reducer', () => {
+      store.replaceReducer(require('./reducer'));
     });
   }
 

@@ -4,29 +4,34 @@ import {connect} from 'react-redux';
 import {load} from 'redux/modules/instagram';
 
 @connect(
-    state => ({info: state.info.data}),
+    state => ({instagram: state.instagram.data}),
     dispatch => bindActionCreators({load}, dispatch))
 export default class Instagram extends Component {
   static propTypes = {
-    info: PropTypes.object,
+    instagram: PropTypes.object,
     load: PropTypes.func.isRequired
   }
 
   render() {
     const instagramIcon = require('./instagram.png');
     const styles = require('./Instagram.scss');
-    const {info} = this.props; // eslint-disable-line no-shadow
-    const instagramData = info.data;
-    const instagramImgs = instagramData.map((post) => {
-      const id = post.id;
-      const urlLinks = post.link;
-      const imgUrl = post.images.standard_resolution.url;
-      return (
-        <div key={id} className="col-xs-4 col-sm-3">
-          <a href={urlLinks} target="_blank"><img src={imgUrl} alt=""/></a>
-        </div>
-      );
-    });
+    const {instagram} = this.props; // eslint-disable-line no-shadow
+    const instagramData = instagram.data;
+    let instagramImgs;
+    if (instagramData === null || instagramData.length === 0 || typeof instagramData === 'undefined') {
+      instagramImgs = <h3>No Image loaded</h3>;
+    } else {
+      instagramImgs = instagramData.map((post) => {
+        const id = post.id;
+        const urlLinks = post.link;
+        const imgUrl = post.images.standard_resolution.url;
+        return (
+          <div key={id} className="col-xs-4 col-sm-3">
+            <a href={urlLinks} target="_blank"><img src={imgUrl} alt=""/></a>
+          </div>
+        );
+      });
+    }
     return (
       <div className={styles.instagram}>
         <div className="container-fluid">

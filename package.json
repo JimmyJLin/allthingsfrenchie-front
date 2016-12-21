@@ -50,7 +50,7 @@
         "NODE_ENV": "development",
         "PORT": 3000,
         "APIPORT": 3030,
-        "APIHOST": "api.instagram.com"
+        "APIHOST": "api-allthingsfrenchie.herokuapp.com/api"
       }
     },
     "watch-client": {
