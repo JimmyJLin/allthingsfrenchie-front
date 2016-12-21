@@ -6,7 +6,8 @@ import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import Helmet from 'react-helmet';
-import { isLoaded as isIstagramLoaded, load as loadInstagram } from 'redux/modules/info';
+import { isLoaded as isIstagramLoaded, load as loadInstagram } from 'redux/modules/instagram';
+import { isLoaded as isFrenchieLoaded, load as loadFrenchie } from 'redux/modules/frenchie';
 import { logout } from 'redux/modules/auth';
 import { Footer, Message } from 'components';
 import { push } from 'react-router-redux';
@@ -20,6 +21,9 @@ import Image from './text_logo.png';
 
     if (!isIstagramLoaded(getState())) {
       promises.push(dispatch(loadInstagram()));
+    }
+    if (!isFrenchieLoaded(getState())) {
+      promises.push(dispatch(loadFrenchie()));
     }
     // if (!isAuthLoaded(getState())) {
     //   promises.push(dispatch(loadAuth()));

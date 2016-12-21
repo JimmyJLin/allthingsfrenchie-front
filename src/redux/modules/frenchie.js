@@ -1,26 +1,26 @@
-const LOAD = 'redux-example/LOAD';
-const LOAD_SUCCESS = 'redux-example/LOAD_SUCCESS';
-const LOAD_FAIL = 'redux-example/LOAD_FAIL';
+const PRODUCT_LOAD = 'redux-example/PRODUCT_LOAD';
+const PRODUCT_LOAD_SUCCESS = 'redux-example/PRODUCT_LOAD_SUCCESS';
+const PRODUCT_LOAD_FAIL = 'redux-example/PRODUCT_LOAD_FAIL';
 
 const initialState = {
   loaded: false
 };
 
-export default function info(state = initialState, action = {}) {
+export default function frenchie(state = initialState, action = {}) {
   switch (action.type) {
-    case LOAD:
+    case PRODUCT_LOAD:
       return {
         ...state,
         loading: true
       };
-    case LOAD_SUCCESS:
+    case PRODUCT_LOAD_SUCCESS:
       return {
         ...state,
         loading: false,
         loaded: true,
         data: action.result
       };
-    case LOAD_FAIL:
+    case PRODUCT_LOAD_FAIL:
       return {
         ...state,
         loading: false,
@@ -33,12 +33,12 @@ export default function info(state = initialState, action = {}) {
 }
 
 export function isLoaded(globalState) {
-  return globalState.info && globalState.info.loaded;
+  return globalState.frenchie && globalState.frenchie.loaded;
 }
 
 export function load() {
   return {
-    types: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
+    types: [PRODUCT_LOAD, PRODUCT_LOAD_SUCCESS, PRODUCT_LOAD_FAIL],
     promise: (client) => client.get('/products')
   };
 }
