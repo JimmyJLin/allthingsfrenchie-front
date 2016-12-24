@@ -3,6 +3,9 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {load} from 'redux/modules/frenchie';
 import Helmet from 'react-helmet';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Thumbnail from 'react-bootstrap/lib/Thumbnail';
 
 @connect(
     state => ({frenchie: state.frenchie.data}),
@@ -14,6 +17,8 @@ export default class Frenchie extends Component {
   }
 
   render() {
+    const styles = require('./Frenchie.scss');
+
     const {frenchie} = this.props;
     const productData = frenchie;
     let products;
@@ -33,12 +38,12 @@ export default class Frenchie extends Component {
           ColorName: product.color_name,
           Size: [product.xxsmall, product.xsmall, product.small, product.medium, product.large, product.xlarge, product.xxlarge]
         };
-        let bullets;
-        const bulletsData = product.product_key_bullets;
-        bullets = bulletsData.map((bullet) => {
-          console.log('bullet', bullet);
-          bullets = <div><ul><li>{bullet}</li></ul></div>;
-        });
+        // let bullets;
+        // const bulletsData = product.product_key_bullets;
+        // bullets = bulletsData.map((bullet) => {
+        //   console.log('bullet', bullet);
+        //   bullets = <div><ul><li>{bullet}</li></ul></div>;
+        // });
         // const sizeData = [
         //   {xxsmall: product.xxsmall},
         //   {xsmal: product.xsmall},
@@ -49,32 +54,40 @@ export default class Frenchie extends Component {
         //   {xxlarge: product.xxlarge},
         // ];
         return (
-          <h4 key={productDetails.Id}>
-            <img src={productDetails.Thumbnail} alt=""/>
-            <br/>
-            <br/>
-            Name: {productDetails.Name}
-            <br/>
-            Price: ${productDetails.Price}
-            <br/>
-            Category: {productDetails.Category}
-            <br/>
-            Descriptions: {productDetails.Descriptions}
-            <br/>
-            Bullets: {bullets}
-            <br/>
-            Colors: {productDetails.ColorName}
-            <br/>
-            Size: {productDetails.Size}
-          </h4>
+          <div className={styles.product} key={productDetails.Id}>
+            <div className="col-md-4 col-xs-6" >
+              <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
+                <br/>
+                <span>
+                  {productDetails.Name}
+                </span>
+                <br/>
+                <span>
+                  ${productDetails.Price}
+                </span>
+                <br/>
+                <br/>
+                <p className={styles.productSnapshot}>
+                  <br/>
+                  <a href="/#" >Quick Shop</a>
+                </p>
+              </Thumbnail>
+            </div>
+          </div>
         );
       });
     }
     return (
-      <div className="container">
-        <h1>Frenchie's Closet</h1>
-        <Helmet title="Frenchie's Closet"/>
-        {products}
+      <div className={styles.frenchie}>
+        <div className="container">
+          <h1>Frenchie's Closet Content Goes Here!</h1>
+          <Helmet title="Frenchie's Closet"/>
+          <Grid className="container-fluid">
+            <Row className="show-grid">
+                {products}
+            </Row>
+          </Grid>
+        </div>
       </div>
     );
   }

@@ -9,7 +9,7 @@ export default class Friends extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Friend's Closet</h1>
+        <h1>Friend's Closet Content Goes Here!</h1>
         <Helmet title="Friend's Closet"/>
 
       </div>

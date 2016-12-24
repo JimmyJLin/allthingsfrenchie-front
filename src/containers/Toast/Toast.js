@@ -9,7 +9,7 @@ export default class Toast extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Frenchie's Toast</h1>
+        <h1>Vintage's Toast Content Goes Here!</h1>
         <Helmet title="Frenchie's Toast"/>
 
       </div>

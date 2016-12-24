@@ -26,7 +26,7 @@ module.exports = Object.assign({
         {property: 'og:image', content: 'https://react-redux.herokuapp.com/logo.jpg'},
         {property: 'og:locale', content: 'en_US'},
         {property: 'og:title', content: 'React Redux Example'},
-        {property: 'og:description', content: 'All the modern best practices in one example.'},
+        {property: 'og:description', content: 'Handpicked items inspired by our French Bulldogs & their Furrriends. Dog friendly & human friendly!'},
         {property: 'og:card', content: 'summary'},
         {property: 'og:site', content: '@erikras'},
         {property: 'og:creator', content: '@erikras'},
