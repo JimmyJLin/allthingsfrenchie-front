@@ -27,19 +27,21 @@ export default class Home extends Component {
           </div>
         </div>
 
-        <IndexLink to="/atfcommunity" className={styles.imgBlock}>
-          <Grid className="container">
-            <Row className="show-grid">
-              <Col xs={17} md={12}>
-                <img src={instagramTop} alt="instagram-top"/>
-              </Col>
-            </Row>
-            <Row className="show-grid">
-              <Col xs={17} md={12}>
-                <img src={instagramPic} alt="instagram-collage"/>
-              </Col>
-            </Row>
-          </Grid>
+        <IndexLink to="/atfcommunity" >
+          <div className={styles.imgBlock}>
+            <Grid className="container">
+              <Row className="show-grid">
+                <Col xs={17} md={12}>
+                  <img src={instagramTop} alt="instagram-top"/>
+                </Col>
+              </Row>
+              <Row className="show-grid">
+                <Col xs={17} md={12}>
+                  <img src={instagramPic} alt="instagram-collage"/>
+                </Col>
+              </Row>
+            </Grid>
+          </div>
         </IndexLink>
       </div>
     );
