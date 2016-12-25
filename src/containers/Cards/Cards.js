@@ -17,7 +17,7 @@ export default class Cards extends Component {
       return el.product_name === name;
     });
 
-    console.log('currentProuct', currentProuct);
+    // console.log('currentProuct', currentProuct);
 
     return (
       <div className="container-fluid">

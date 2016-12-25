@@ -1,0 +1,70 @@
+.card {
+
+  .col-md-6 {
+    background-color: blue;
+    padding-top: 5%;
+  }
+  .imgBlock {
+    padding-bottom: 2%;
+
+    img{
+      padding-left: 5px;
+      margin: 0;
+      width: 150px;
+      height: auto;
+    }
+    img:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+  }
+
+  .productBlock {
+    span{
+      font-weight: bold;
+    }
+
+  }
+
+  .form{
+    display: block;
+    .form-group{
+      padding-right: 5px;
+    }
+
+    .quantity{
+      select{
+        cursor: pointer;
+        border-radius: 0;
+        font-size: .6875rem;
+        line-height: 1em;
+        margin: 0 30px 0 0;
+        color: #555;
+        font-weight: 500;
+      }
+    }
+
+    .button{
+      padding-left: 5px;
+      p {
+        color: white;
+        background-color: #222;
+        cursor: pointer;
+        display: block;
+        font-weight: 700;
+        margin: 0;
+        text-decoration: none;
+        border: 1px solid #222;
+        transition: none;
+      }
+    }
+  }
+
+  .details{
+    span{
+      font-weight: bold;
+    }
+  }
+
+}
