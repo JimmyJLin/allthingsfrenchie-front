@@ -56,7 +56,7 @@ export default class Frenchie extends Component {
         // ];
         return (
           <IndexLink to={'frenchie/' + productDetails.Name} className={styles.product} key={productDetails.Id} data={productDetails}>
-            <div className="col-md-4 col-xs-6" >
+            <div className="col-md-4 col-xs-12" >
               <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
                 <br/>
                 <span>
