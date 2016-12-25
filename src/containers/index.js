@@ -15,3 +15,4 @@ export Friends from './Friends/Friends';
 export Toast from './Toast/Toast';
 export Profile from './Profile/Profile';
 export Cards from './Cards/Cards';
+export Instagram from './Instagram/Instagram';

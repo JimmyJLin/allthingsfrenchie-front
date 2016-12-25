@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import Helmet from 'react-helmet';
 import {load} from 'redux/modules/instagram';
 
 @connect(
@@ -14,6 +15,7 @@ export default class Instagram extends Component {
 
   render() {
     const instagramIcon = require('./instagram.png');
+    const atfcommunity = require('./atfcommunity.png');
     const styles = require('./Instagram.scss');
     const {instagram} = this.props; // eslint-disable-line no-shadow
     const instagramData = instagram.data;
@@ -34,13 +36,26 @@ export default class Instagram extends Component {
     }
     return (
       <div className={styles.instagram}>
+        <Helmet title="atfcommunity"/>
         <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-3"></div>
-            <div className="col-md-6">
-              <h3 className={styles.header} align="center"><a href="https://www.instagram.com/allthingsfrenchie_shop/"><img src={instagramIcon} alt=""/><span>Follow us on Instagram</span></a></h3>
+          <div className={styles.header}>
+            <div className="row">
+              <div className="col-md-3"></div>
+              <div className="col-md-6">
+                <img src={atfcommunity} alt=""/>
+                <br/>
+                <p>All Things Frenchie Shop Handpicked items inspired by our French Bulldogs & their Furrriends. Dog friendly & human friendly!</p>
+              </div>
+              <div className="col-md-3"></div>
             </div>
-            <div className="col-md-3"></div>
+            <br/>
+            <div className="row">
+              <div className="col-md-3"></div>
+              <div className="col-md-6">
+                <h3 className={styles.followUS} align="center"><a href="https://www.instagram.com/allthingsfrenchie_shop/"><img src={instagramIcon} alt=""/><span>Follow us on Instagram</span></a></h3>
+              </div>
+              <div className="col-md-3"></div>
+            </div>
           </div>
           <br/>
           <div className={styles.instagramContainer}>

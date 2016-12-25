@@ -4,29 +4,47 @@
   dd {
     margin-bottom: 15px;
   }
-}
-.masthead {
-  background: #2d2d2d;
-  padding: 40px 20px;
-  color: white;
-  text-align: center;
 
-  h2 {
-    color: #ddd;
-    font-size: 2em;
-    margin: 20px;
-  }
+  // headerContent stylings
+  .headerContent {
+    background: #2d2d2d;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
 
-  .humility {
-    color: $humility;
-    a {
+    h2 {
+      color: #ddd;
+      font-size: 2em;
+      margin: 20px;
+    }
+
+    .humility {
       color: $humility;
+      a {
+        color: $humility;
+      }
     }
   }
 
-}
+  // mainContent stylings
+  .mainContent {
 
-.counterContainer {
-  text-align: center;
-  margin: 20px;
+  }
+
+  // imgBlock stylings
+  .imgBlock{
+    padding-top: 50px;
+    cursor: pointer;
+    img{
+      padding-left: 0px;
+      margin: 0px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .imgBlock:hover{
+    opacity: .7;
+    transition: 1s;
+  }
+
 }

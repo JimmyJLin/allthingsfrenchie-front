@@ -80,6 +80,7 @@ export default class Frenchie extends Component {
     }
     return (
       <div className={styles.frenchie}>
+        <Helmet title="Frenchie's Closet"/>
         <div className="container">
           <h1>Frenchie's Closet Content Goes Here!</h1>
           <Helmet title="Frenchie's Closet"/>

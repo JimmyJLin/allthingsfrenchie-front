@@ -16,6 +16,7 @@ import {
     Friends,
     Toast,
     Profile,
+    Instagram,
     Cards
   } from 'containers';
 
@@ -64,6 +65,7 @@ export default (store) => {
       <Route path="friends" component={Friends}/>
       <Route path="toast" component={Toast}/>
       <Route path="profile" component={Profile}/>
+      <Route path="atfcommunity" component={Instagram}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />
