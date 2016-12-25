@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
+import { IndexLink } from 'react-router';
 import {load} from 'redux/modules/frenchie';
 import Helmet from 'react-helmet';
 import Grid from 'react-bootstrap/lib/Grid';
@@ -12,7 +13,7 @@ import Thumbnail from 'react-bootstrap/lib/Thumbnail';
     dispatch => bindActionCreators({load}, dispatch))
 export default class Frenchie extends Component {
   static propTypes = {
-    frenchie: PropTypes.object,
+    frenchie: PropTypes.array,
     load: PropTypes.func.isRequired
   }
 
@@ -54,7 +55,7 @@ export default class Frenchie extends Component {
         //   {xxlarge: product.xxlarge},
         // ];
         return (
-          <div className={styles.product} key={productDetails.Id}>
+          <IndexLink to={'frenchie/' + productDetails.Name} className={styles.product} key={productDetails.Id} data={productDetails}>
             <div className="col-md-4 col-xs-6" >
               <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
                 <br/>
@@ -67,13 +68,13 @@ export default class Frenchie extends Component {
                 </span>
                 <br/>
                 <br/>
-                <p className={styles.productSnapshot}>
+                <div className={styles.productSnapshot}>
                   <br/>
-                  <a href="/#" >Quick Shop</a>
-                </p>
+                  <p>Quick Shop</p>
+                </div>
               </Thumbnail>
             </div>
-          </div>
+          </IndexLink>
         );
       });
     }

@@ -15,7 +15,8 @@ import {
     Frenchie,
     Friends,
     Toast,
-    Profile
+    Profile,
+    Cards
   } from 'containers';
 
 export default (store) => {
@@ -59,6 +60,7 @@ export default (store) => {
 
       {/* allthingsfrnehice Routes */}
       <Route path="frenchie" component={Frenchie}/>
+      <Route path="frenchie/:name" component={Cards}/>
       <Route path="friends" component={Friends}/>
       <Route path="toast" component={Toast}/>
       <Route path="profile" component={Profile}/>

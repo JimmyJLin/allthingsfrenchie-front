@@ -14,3 +14,4 @@ export Frenchie from './Frenchie/Frenchie';
 export Friends from './Friends/Friends';
 export Toast from './Toast/Toast';
 export Profile from './Profile/Profile';
+export Cards from './Cards/Cards';
