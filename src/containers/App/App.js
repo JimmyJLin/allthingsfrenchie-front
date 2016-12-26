@@ -54,39 +54,40 @@ export default class App extends Component {
       <div className={styles.app}>
         <Helmet {...config.app.head}/>
         <Navbar fixedTop>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <IndexLink to="/" activeStyle={{color: '#33e0ff'}}>
-                <div className={styles.brand}/>
-                <span>
-                  <img id="navbar_img" src={Image} alt="text-logo"/>
-                </span>
-              </IndexLink>
-            </Navbar.Brand>
-            <Navbar.Toggle/>
-          </Navbar.Header>
+          <div className={styles.navbar}>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <IndexLink to="/" activeStyle={{color: '#33e0ff'}}>
+                  <span>
+                    <img id="navbar_img" src={Image} alt="text-logo"/>
+                  </span>
+                </IndexLink>
+              </Navbar.Brand>
+              <Navbar.Toggle/>
+            </Navbar.Header>
 
-          <Navbar.Collapse eventKey={0}>
-            <Nav navbar>
-              <LinkContainer to="/frenchie">
-                <NavItem eventKey={2}>Frenchie's Closet</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/friends">
-                <NavItem eventKey={3}>Friend's Closet</NavItem>
-              </LinkContainer>
-              <LinkContainer to="/toast">
-                <NavItem eventKey={4}>Frenchie's Toast</NavItem>
-              </LinkContainer>
+            <Navbar.Collapse eventKey={0}>
+              <Nav navbar>
+                <LinkContainer to="/frenchie">
+                  <NavItem eventKey={2}>Frenchie's Closet</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/friends">
+                  <NavItem eventKey={3}>Friend's Closet</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/toast">
+                  <NavItem eventKey={4}>Frenchie's Toast</NavItem>
+                </LinkContainer>
 
-            </Nav>
-            <Nav navbar pullRight>
-              <LinkContainer to="/profile">
-                <NavItem eventKey={1}>
-                  <i className="glyphicon glyphicon-user"/>
-                </NavItem>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
+              </Nav>
+              <Nav navbar pullRight>
+                <LinkContainer to="/profile">
+                  <NavItem eventKey={1}>
+                    <i className="glyphicon glyphicon-user"/>
+                  </NavItem>
+                </LinkContainer>
+              </Nav>
+            </Navbar.Collapse>
+          </div>
         </Navbar>
 
         {/* App Content - starts */}

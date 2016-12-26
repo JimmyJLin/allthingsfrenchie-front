@@ -3,6 +3,9 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import Helmet from 'react-helmet';
 import {load} from 'redux/modules/instagram';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 
 @connect(
     state => ({instagram: state.instagram.data}),
@@ -28,42 +31,40 @@ export default class Instagram extends Component {
         const urlLinks = post.link;
         const imgUrl = post.images.standard_resolution.url;
         return (
-          <div key={id} className="col-xs-4 col-sm-3">
-            <a href={urlLinks} target="_blank"><img src={imgUrl} alt=""/></a>
-          </div>
+            <a key={id} href={urlLinks} target="_blank">
+              <img src={imgUrl} alt=""/>
+            </a>
         );
       });
     }
     return (
       <div className={styles.instagram}>
         <Helmet title="atfcommunity"/>
-        <div className="container-fluid">
+        <Grid className="container-fluid">
           <div className={styles.header}>
-            <div className="row">
-              <div className="col-md-3"></div>
-              <div className="col-md-6">
+            <Row className="show-grid">
+              <Col xs={17} md={6} xsOffset={1} mdOffset={3}>
                 <img src={atfcommunity} alt=""/>
                 <br/>
                 <p>All Things Frenchie Shop Handpicked items inspired by our French Bulldogs & their Furrriends. Dog friendly & human friendly!</p>
-              </div>
-              <div className="col-md-3"></div>
-            </div>
+              </Col>
+            </Row>
             <br/>
-            <div className="row">
-              <div className="col-md-3"></div>
-              <div className="col-md-6">
+            <Row className="show-grid">
+              <Col xs={17} md={6} xsOffset={1} mdOffset={3}>
                 <h3 className={styles.followUS} align="center"><a href="https://www.instagram.com/allthingsfrenchie_shop/"><img src={instagramIcon} alt=""/><span>Follow us on Instagram</span></a></h3>
-              </div>
-              <div className="col-md-3"></div>
-            </div>
+              </Col>
+            </Row>
           </div>
           <br/>
-          <div className={styles.instagramContainer}>
-            <div className="row">
-              {instagramImgs}
+          <Row className="show-grid">
+            <div className={styles.instagramContainer}>
+              <Col xs={18} sm={18} md={12}>
+                {instagramImgs}
+              </Col>
             </div>
-          </div>
-        </div>
+          </Row>
+        </Grid>
       </div>
     );
   }

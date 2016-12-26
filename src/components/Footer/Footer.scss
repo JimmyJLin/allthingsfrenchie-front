@@ -1,42 +1,11 @@
 .footer{
   padding-top: 8%;
-  height: 400px;
+  height: 500px;
   margin-top: 1.5%;
   background-color: #f5f5f5;
   position: absolute;
   left: 0;
   right: 0;
-
-  ul {
-    list-style: none;
-    a{
-      color: #888;
-    }
-  }
-
-  form{
-    input{
-      border-style: solid;
-      border-width: 1px;
-      border-color: #aaa;
-      box-shadow: none;
-      display: block;
-      margin: 0 0 1rem;
-      padding: .5rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    input[type=submit] {
-      background-color: #222;
-      cursor: pointer;
-      display: block;
-      font-weight: 700;
-      margin: 0;
-      text-decoration: none;
-      border: 1px solid #222;
-      transition: none;
-    }
-  }
 
   p {
     color: #222;
@@ -49,20 +18,114 @@
     margin-right: 5%;
   }
 
-}
+  .help{
+    padding-bottom: 5%;
+    ul {
+      list-style: none;
+      a{
+        color: #888;
+        border-bottom: 0;
+      }
+    }
+  }
 
-.social_media_icons{
-  display: inline-block;
-  padding-left: 27%;
-  img {
-    margin-right: 5px;
-    font-size: 1rem;
-    color: blue;
-    text-shadow: none;
-    background-image: none;
-    box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
-    height: 50px;
-    width: 50px;
-    border-radius: 10em;
+  .emailSignup{
+    padding-bottom: 5%;
+    form{
+      input{
+        border-style: solid;
+        border-width: 1px;
+        border-color: #aaa;
+        box-shadow: none;
+        display: block;
+        margin: 0 0 1rem;
+        padding: .5rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input[type=submit] {
+        background-color: #222;
+        cursor: pointer;
+        display: block;
+        font-weight: 700;
+        margin: 0;
+        text-decoration: none;
+        border: 1px solid #222;
+        transition: none;
+      }
+    }
+
+  }
+
+  .social_media_icons{
+    display: inline-block;
+    img {
+      margin-right: 5px;
+      font-size: 1rem;
+      color: blue;
+      text-shadow: none;
+      background-image: none;
+      box-shadow: 0 0 0 0 rgba(34,36,38,.15) inset;
+      height: 40px;
+      width: 40px;
+      border-radius: 10em;
+    }
   }
 }
+
+/* Mobile & Tablet @media imports - starts */
+// iPhone 4
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .footer{
+    margin-top: 6%;
+
+  }
+
+}
+// iPhone 5 & 5S
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .footer{
+    margin-top: 4%;
+
+  }
+
+}
+// iPhone 6 & 6S
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .footer{
+    margin-top: 4%;
+
+    .social_media_icons{
+      padding-left: 8%;
+    }
+  }
+
+}
+// iPhone 6plus
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .footer{
+    margin-top: 4%;
+
+    .social_media_icons{
+      padding-left: 8%;
+    }
+  }
+
+}
+// Tablets
+@media only screen and (min-device-width: 736px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .footer{
+    margin-top: 2%;
+
+    .social_media_icons{
+      padding-left: 2%;
+    }
+  }
+
+}
+// Tablets - iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .footer{}
+
+}
+/* Mobile & Tablet @media imports - ends */

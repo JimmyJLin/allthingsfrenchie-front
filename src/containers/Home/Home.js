@@ -13,37 +13,39 @@ export default class Home extends Component {
     const instagramPic = require('./instagram.jpg');
     // require the logo image both from client and server
     return (
-      <div className={styles.home}>
-        <Helmet title="Home"/>
-        <div className={styles.headerContent}>
-          <div className="container">
-            <h2> Main Page Header Content goes here </h2>
+        <Grid className="container">
+          <div className={styles.home}>
+          <Helmet title="Home"/>
+          <div className={styles.headerContent}>
+            <div className="container">
+              <h2> Main Page Header Content goes here </h2>
+            </div>
           </div>
-        </div>
 
-        <div className={styles.mainContent}>
-          <div className="container">
-            <h2> Main Page Content goes here </h2>
+          <div className={styles.mainContent}>
+            <div className="container">
+              <h2> Main Page Content goes here </h2>
+            </div>
           </div>
-        </div>
 
-        <IndexLink to="/atfcommunity" >
-          <div className={styles.imgBlock}>
-            <Grid className="container">
-              <Row className="show-grid">
-                <Col xs={17} md={12}>
-                  <img src={instagramTop} alt="instagram-top"/>
-                </Col>
-              </Row>
-              <Row className="show-grid">
-                <Col xs={17} md={12}>
-                  <img src={instagramPic} alt="instagram-collage"/>
-                </Col>
-              </Row>
-            </Grid>
-          </div>
-        </IndexLink>
-      </div>
+          <IndexLink to="/atfcommunity" >
+            <div className={styles.imgBlock}>
+              <Grid className="container">
+                <Row className="show-grid">
+                  <Col xs={17} md={12}>
+                    <img src={instagramTop} alt="instagram-top"/>
+                  </Col>
+                </Row>
+                <Row className="show-grid">
+                  <Col xs={17} md={12}>
+                    <img src={instagramPic} alt="instagram-collage"/>
+                  </Col>
+                </Row>
+              </Grid>
+            </div>
+          </IndexLink>
+        </div>
+      </Grid>
     );
   }
 }
