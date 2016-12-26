@@ -31,9 +31,11 @@ export default class Instagram extends Component {
         const urlLinks = post.link;
         const imgUrl = post.images.standard_resolution.url;
         return (
-            <a key={id} href={urlLinks} target="_blank">
+          <Col key={id} xs={18} sm={18} md={3} className={styles.instagramContainer}>
+            <a href={urlLinks} target="_blank">
               <img src={imgUrl} alt=""/>
             </a>
+          </Col>
         );
       });
     }
@@ -60,11 +62,7 @@ export default class Instagram extends Component {
           <Row className="show-grid">
             <Grid className="container-fluid">
               <Row className="show-grid">
-                <div className={styles.instagramContainer}>
-                  <Col xs={18} sm={18} md={12}>
-                    {instagramImgs}
-                  </Col>
-                </div>
+                {instagramImgs}
               </Row>
             </Grid>
           </Row>

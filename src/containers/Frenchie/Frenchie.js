@@ -6,6 +6,7 @@ import {load} from 'redux/modules/frenchie';
 import Helmet from 'react-helmet';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 import Thumbnail from 'react-bootstrap/lib/Thumbnail';
 
 @connect(
@@ -56,7 +57,7 @@ export default class Frenchie extends Component {
         // ];
         return (
           <IndexLink to={'frenchie/' + productDetails.Name} className={styles.product} key={productDetails.Id} data={productDetails}>
-            <div className="col-md-4 col-xs-12" >
+            <Col xs={12} md={4} >
               <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
                 <br/>
                 <span>
@@ -73,7 +74,7 @@ export default class Frenchie extends Component {
                   <p>Quick Shop</p>
                 </div>
               </Thumbnail>
-            </div>
+            </Col>
           </IndexLink>
         );
       });
