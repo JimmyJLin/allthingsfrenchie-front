@@ -58,11 +58,15 @@ export default class Instagram extends Component {
           </div>
           <br/>
           <Row className="show-grid">
-            <div className={styles.instagramContainer}>
-              <Col xs={18} sm={18} md={12}>
-                {instagramImgs}
-              </Col>
-            </div>
+            <Grid className="container-fluid">
+              <Row className="show-grid">
+                <div className={styles.instagramContainer}>
+                  <Col xs={18} sm={18} md={12}>
+                    {instagramImgs}
+                  </Col>
+                </div>
+              </Row>
+            </Grid>
           </Row>
         </Grid>
       </div>

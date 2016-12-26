@@ -1,4 +1,7 @@
 .instagram{
+  a{
+    border-bottom: 0;
+  }
   .header{
     img{
       padding-left: 0px;
@@ -30,10 +33,11 @@
 
   .instagramContainer{
     img {
-      margin: 0;
       padding-left: 0;
       padding-right: 5px;
       margin: 5px;
+      width: 15%;
+      height: auto;
     }
     img:hover{
       cursor: pointer;
