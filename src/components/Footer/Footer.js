@@ -44,7 +44,6 @@ export default class Footer extends Component {
             </Col>
             <Col xs={12} sm={4}>
               <p>Follow Us</p>
-              <br/>
               <Col xs={10} sm={12} md={8} xsOffset={3} smOffset={2} mdOffset={3}>
                 <div className={styles.social_media_icons}>
                   <a href="#" target="_blank"><img src={facebookIcon} alt="facebook icon"/></a>

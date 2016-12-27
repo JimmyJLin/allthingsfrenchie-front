@@ -15,3 +15,5 @@ export WidgetForm from './old/WidgetForm/WidgetForm';
 export Footer from './Footer/Footer';
 export Message from './Message/Message';
 export Card from './Card/Card';
+export Instagram from './Instagram/Instagram';
+export Jumbotron from './Jumbotron/Jumbotron';
