@@ -33,9 +33,9 @@
 
   .instagramContainer{
     img {
-      padding-left: 0;
-      padding-right: 5px;
-      margin: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-bottom: 5%;
       width: 100%;
       height: auto;
     }
@@ -52,6 +52,9 @@
 // iPhone 4
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .instagram{
+    .header{
+      padding-top: 5%;
+    }
     .followUS{
       padding-left: 15px;
       img {
@@ -68,8 +71,9 @@
       padding-right: 0px;
       img {
         padding-left: 0px;
-        margin: 0px;
-        width: 45%;
+        padding-right: 0px;
+        margin: 5px;
+        width: 100%;
         height: auto;
       }
     }
@@ -78,6 +82,9 @@
 // iPhone 5 & 5S
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .instagram{
+    .header{
+      padding-top: 5%;
+    }
     .followUS{
       padding-left: 5px;
       img {
@@ -94,8 +101,9 @@
       padding-right: 0px;
       img {
         padding-left: 0px;
-        margin: 0px;
-        width: 50%;
+        padding-right: 0px;
+        margin: 5px;
+        width: 100%;
         height: auto;
       }
     }
@@ -104,8 +112,11 @@
 // iPhone 6 & 6S
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
   .instagram{
+    .header{
+      padding-top: 5%;
+    }
     .followUS{
-      padding-left: 15px;
+      padding-left: 10px;
       img {
         margin: 3px;
         width: 35px;
@@ -120,8 +131,9 @@
       padding-right: 0px;
       img {
         padding-left: 0px;
-        margin: 0px;
-        width: 50%;
+        padding-right: 0px;
+        margin: 5px;
+        width: 100%;
         height: auto;
       }
     }
@@ -130,6 +142,9 @@
 // iPhone 6plus
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
   .instagram{
+    .header{
+      padding-top: 5%;
+    }
     .followUS{
       padding-left: 15px;
       img {
@@ -146,8 +161,9 @@
       padding-right: 0px;
       img {
         padding-left: 0px;
-        margin: 0px;
-        width: 50%;
+        padding-right: 0px;
+        margin: 5px;
+        width: 100%;
         height: auto;
       }
     }
@@ -156,17 +172,25 @@
 }
 // Tablets - ipad
 @media only screen and (min-device-width: 736px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  body{
+    padding: 1rem;
+  }
   .instagram{
     .header{
+      padding-top: 5%;
       img{
-        width: 88%;
+        margin-left: 16%;
+        width: 60%;
         height: auto;
       }
       p{
-        margin-right: 10%;
+        font-size: 1em;
+        margin-left: 18%;
+        margin-right: 30%
       }
     }
     .followUS{
+      padding-left: 22%;
       img {
         margin: 3px;
         width: 35px;
@@ -178,8 +202,10 @@
       padding-right: 0px;
       img {
         padding-left: 0px;
-        margin: 0px;
-        width: 30%;
+        padding-right: 0px;
+        margin-bottom: 5%;
+        margin: 5px;
+        width: 100%;
         height: auto;
       }
     }
@@ -189,20 +215,24 @@
 
 // Tablets - iPad Pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  body{
+    padding: 1rem;
+  }
   .instagram{
     .header{
       img{
-        margin-left: -15%;
+        margin-left: -8%;
         width: auto;
         height: auto;
       }
       p{
         font-size: 1.25em;
-        margin-left: -5%;
+        margin-left: 0%;
+        margin-right: 0%;
       }
     }
     .followUS{
-      padding-left: 4%;
+      padding-left: 12%;
       img {
         margin: 3px;
         width: 35px;
@@ -214,8 +244,9 @@
       padding-right: 0px;
       img {
         padding-left: 0px;
-        margin: 0px;
-        width: 30%;
+        padding-right: 0px;
+        margin-bottom: 5%;
+        width: 100%;
         height: auto;
       }
     }

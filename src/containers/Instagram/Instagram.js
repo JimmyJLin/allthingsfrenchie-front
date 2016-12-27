@@ -31,11 +31,13 @@ export default class Instagram extends Component {
         const urlLinks = post.link;
         const imgUrl = post.images.standard_resolution.url;
         return (
-          <Col key={id} xs={18} sm={18} md={3} className={styles.instagramContainer}>
-            <a href={urlLinks} target="_blank">
-              <img src={imgUrl} alt=""/>
-            </a>
-          </Col>
+          <div key={id} className={styles.instagramContainer}>
+            <Col xs={18} sm={6} md={3}>
+              <a href={urlLinks} target="_blank">
+                <img src={imgUrl} alt=""/>
+              </a>
+            </Col>
+          </div>
         );
       });
     }
@@ -53,8 +55,13 @@ export default class Instagram extends Component {
             </Row>
             <br/>
             <Row className="show-grid">
-              <Col xs={17} md={6} xsOffset={1} mdOffset={3}>
-                <h3 className={styles.followUS} align="center"><a href="https://www.instagram.com/allthingsfrenchie_shop/"><img src={instagramIcon} alt=""/><span>Follow us on Instagram</span></a></h3>
+              <Col xs={10} sm={10} md={8} xsOffset={1} mdOffset={3}>
+                <h3 className={styles.followUS} align="center">
+                  <a href="https://www.instagram.com/allthingsfrenchie_shop/">
+                    <img src={instagramIcon} alt=""/>
+                    <span>Follow us on Instagram</span>
+                  </a>
+                </h3>
               </Col>
             </Row>
           </div>
