@@ -10,11 +10,11 @@ export default class Jumbotron extends Component {
     const styles = require('./Jumbotron.scss');
     const mainImg = require('./images/jumbotron.jpeg');
     return (
-      <div className={styles.jumbotron}>
         <Grid className="container">
-          <div className={styles.headerContent}>
-            <span> SHOP YOUR FAVORITE CLOSET</span>
-          </div>
+          <div className={styles.jumbotron}>
+            <div className={styles.headerContent}>
+              <span> SHOP YOUR FAVORITE CLOSET</span>
+            </div>
             <Row className="show-grid">
               <Col xs={17} md={12}>
                 <div className={styles.imgBlock}>
@@ -33,8 +33,8 @@ export default class Jumbotron extends Component {
                 </div>
               </Col>
             </Row>
+          </div>
         </Grid>
-      </div>
     );
   }
 }
