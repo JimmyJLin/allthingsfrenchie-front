@@ -8,8 +8,8 @@ export default class Instagram extends Component {
 
   render() {
     const styles = require('./Instagram.scss');
-    const instagramTop = require('./instagram-top.png');
-    const instagramPic = require('./instagram.jpg');
+    const instagramTop = require('./images/instagram-top.png');
+    const instagramPic = require('./images/instagram.jpg');
     return (
       <div className={styles.instagram}>
         <IndexLink to="/atfcommunity" >

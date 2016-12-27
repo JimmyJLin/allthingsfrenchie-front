@@ -13,7 +13,7 @@ import { Footer, Message } from 'components';
 import { push } from 'react-router-redux';
 import config from '../../config';
 import { asyncConnect } from 'redux-async-connect';
-import Image from './text_logo.png';
+import Image from './images/text_logo.png';
 
 @asyncConnect([{
   promise: ({store: {dispatch, getState}}) => {

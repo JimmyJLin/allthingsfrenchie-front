@@ -17,8 +17,8 @@ export default class Instagram extends Component {
   }
 
   render() {
-    const instagramIcon = require('./instagram.png');
-    const atfcommunity = require('./atfcommunity.png');
+    const instagramIcon = require('./images/instagram.png');
+    const atfcommunity = require('./images/atfcommunity.png');
     const styles = require('./Instagram.scss');
     const {instagram} = this.props; // eslint-disable-line no-shadow
     const instagramData = instagram.data;
