@@ -8,7 +8,7 @@ import auth from './modules/auth';
 import counter from './modules/counter';
 import {reducer as form} from 'redux-form';
 import instagram from './modules/instagram';
-import frenchie from './modules/frenchie';
+import products from './modules/products';
 import widgets from './modules/widgets';
 
 export default combineReducers({
@@ -22,7 +22,7 @@ export default combineReducers({
     counter3: counter
   }),
   instagram,
-  frenchie,
+  products,
   pagination,
   widgets
 });

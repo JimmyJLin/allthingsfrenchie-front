@@ -13,14 +13,14 @@ export default class Jumbotron extends Component {
         <Grid className="container">
           <div className={styles.jumbotron}>
             <Row className="show-grid">
-              <Col xs={17} sm={11} md={11}>
+              <Col xs={17} sm={11} md={12}>
                 <div className={styles.headerContent}>
                   <span> SHOP YOUR FAVORITE CLOSET</span>
                 </div>
               </Col>
             </Row>
             <Row className="show-grid">
-              <Col xs={17} sm={11} md={11}>
+              <Col xs={17} sm={11} md={12}>
                 <div className={styles.imgBlock}>
                   <img src={mainImg} alt="jumbotron"/>
                 </div>

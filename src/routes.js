@@ -63,6 +63,7 @@ export default (store) => {
       <Route path="frenchie" component={Frenchie}/>
       <Route path="frenchie/:name" component={Cards}/>
       <Route path="friends" component={Friends}/>
+      <Route path="friends/:name" component={Cards}/>
       <Route path="toast" component={Toast}/>
       <Route path="profile" component={Profile}/>
       <Route path="atfcommunity" component={Instagram}/>

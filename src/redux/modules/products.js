@@ -6,7 +6,7 @@ const initialState = {
   loaded: false
 };
 
-export default function frenchie(state = initialState, action = {}) {
+export default function products(state = initialState, action = {}) {
   switch (action.type) {
     case PRODUCT_LOAD:
       return {
@@ -33,7 +33,7 @@ export default function frenchie(state = initialState, action = {}) {
 }
 
 export function isLoaded(globalState) {
-  return globalState.frenchie && globalState.frenchie.loaded;
+  return globalState.products && globalState.products.loaded;
 }
 
 export function load() {

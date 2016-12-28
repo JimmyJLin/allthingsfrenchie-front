@@ -1,0 +1,136 @@
+.friends{
+
+  .product{
+    .thumbnail{
+      span{
+        cursor: pointer;
+        padding-top: 5px;
+      }
+
+      img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: auto;
+        padding-top: 5px;
+        cursor: pointer;
+      }
+
+      .productSnapshot {
+        display: none;
+        cursor: pointer;
+        background: rgba(255, 255, 255, .7);
+        height: 8%;
+        bottom: 19.5%;
+        left: 5%;
+        position: absolute;
+        text-align: center;
+        width: 90%;
+
+        p {
+          background-color: transparent;
+          border: 0;
+          cursor: pointer;
+          color: #555;
+          font-size: 12px;
+          text-align: center;
+          letter-spacing: 3px;
+          text-decoration: none;
+        }
+        p:hover{
+          background-color: transparent;
+          border: 0
+        }
+      }
+    }
+
+    .thumbnail:hover{
+      .productSnapshot{
+        display: block;
+      }
+    }
+  }
+
+}
+
+
+/* Mobile & Tablet @media imports - starts */
+// iPhone 4
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .frenchie{
+    .product{
+      .thumbnail{
+        .productSnapshot{
+          display: block;
+          bottom: 29.5%;
+        }
+      }
+    }
+  }
+}
+// iPhone 5 & 5S
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .frenchie{
+    .product{
+      .thumbnail{
+        .productSnapshot{
+          display: block;
+          bottom: 29.5%;
+        }
+      }
+    }
+  }
+}
+// iPhone 6 & 6S
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .frenchie{
+    .product{
+      .thumbnail{
+        .productSnapshot{
+          display: block;
+          bottom: 23%;
+        }
+      }
+    }
+  }
+}
+// iPhone 6plus
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .frenchie{
+    .product{
+      .thumbnail{
+        .productSnapshot{
+          display: block;
+          bottom: 21%;
+        }
+      }
+    }
+  }
+}
+// Tablets
+@media only screen and (min-device-width: 736px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .frenchie{
+    .product{
+      .thumbnail{
+        .productSnapshot{
+          display: block;
+          bottom: 20%;
+        }
+      }
+    }
+  }
+}
+// Tablets - iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .frenchie{
+    .product{
+      .thumbnail{
+        .productSnapshot{
+          display: block;
+          bottom: 22.5%;
+        }
+      }
+    }
+  }
+}
+/* Mobile & Tablet @media imports - ends */
