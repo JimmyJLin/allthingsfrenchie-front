@@ -41,7 +41,6 @@ export default class Frenchie extends Component {
           ColorName: product.color_name,
           Size: [product.xxsmall, product.xsmall, product.small, product.medium, product.large, product.xlarge, product.xxlarge]
         };
-        console.log('productDetails', productDetails);
         // let bullets;
         // const bulletsData = product.product_key_bullets;
         // bullets = bulletsData.map((bullet) => {

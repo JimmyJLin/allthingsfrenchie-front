@@ -8,11 +8,9 @@
       }
 
       img{
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         width: auto;
         height: auto;
-        padding-top: 5px;
         cursor: pointer;
       }
 
@@ -21,7 +19,7 @@
         cursor: pointer;
         background: rgba(255, 255, 255, .7);
         height: 8%;
-        bottom: 19.5%;
+        bottom: 18%;
         left: 5%;
         position: absolute;
         text-align: center;
@@ -62,7 +60,7 @@
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 29.5%;
+          bottom: 29%;
         }
       }
     }
@@ -75,7 +73,7 @@
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 29.5%;
+          bottom: 29%;
         }
       }
     }
@@ -88,7 +86,7 @@
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 23%;
+          bottom: 22%;
         }
       }
     }
@@ -101,7 +99,7 @@
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 21%;
+          bottom: 19.5%;
         }
       }
     }
@@ -114,7 +112,19 @@
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 20%;
+          bottom: 19%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-device-width: 992px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .frenchie{
+    .product{
+      .thumbnail{
+        .productSnapshot{
+          display: block;
+          bottom: 21.5%;
         }
       }
     }
@@ -127,7 +137,7 @@
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 22.5%;
+          bottom: 21.5%;
         }
       }
     }
