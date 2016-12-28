@@ -3,16 +3,16 @@ import {connect} from 'react-redux';
 import { Card } from 'components';
 
 @connect(
-    state => ({frenchie: state.frenchie.data}))
+    state => ({products: state.products.data}))
 export default class Cards extends Component {
   static propTypes = {
-    frenchie: PropTypes.array,
+    products: PropTypes.array,
     params: PropTypes.object
   }
   render() {
-    const { frenchie, params } = this.props;
+    const { products, params } = this.props;
     const name = params.name;
-    const productArry = frenchie;
+    const productArry = products;
     const currentProuct = productArry.filter((el) => {
       return el.product_name === name;
     });
