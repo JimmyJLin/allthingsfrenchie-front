@@ -16,12 +16,12 @@ export default class Instagram extends Component {
           <div className={styles.imgBlock}>
             <Grid className="container">
               <Row className="show-grid">
-                <Col xs={17} md={12}>
+                <Col xs={16} sm={11} md={11}>
                   <img src={instagramTop} alt="instagram-top"/>
                 </Col>
               </Row>
               <Row className="show-grid">
-                <Col xs={17} md={12}>
+                <Col xs={16} sm={11} md={11}>
                   <img src={instagramPic} alt="instagram-collage"/>
                 </Col>
               </Row>
