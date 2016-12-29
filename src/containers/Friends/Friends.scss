@@ -55,8 +55,11 @@
 /* Mobile & Tablet @media imports - starts */
 // iPhone 4
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frenchie{
+  .friends{
     .product{
+      .content{
+        margin-left: 15px;
+      }
       .thumbnail{
         .productSnapshot{
           display: block;
@@ -68,12 +71,16 @@
 }
 // iPhone 5 & 5S
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frenchie{
+  .friends{
     .product{
+      .content{
+        margin-left: 15px;
+      }
       .thumbnail{
         .productSnapshot{
+          height: 10%;
           display: block;
-          bottom: 29%;
+          bottom: 21%;
         }
       }
     }
@@ -81,12 +88,16 @@
 }
 // iPhone 6 & 6S
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  .frenchie{
+  .friends{
     .product{
+      .content{
+        margin-left: 15px;
+      }
       .thumbnail{
         .productSnapshot{
+          height: 9%;
           display: block;
-          bottom: 22%;
+          bottom: 18%;
         }
       }
     }
@@ -94,37 +105,47 @@
 }
 // iPhone 6plus
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
-  .frenchie{
+  .friends{
     .product{
+      .content{
+        margin-left: 15px;
+      }
       .thumbnail{
         .productSnapshot{
+          height: 8%;
           display: block;
-          bottom: 19.5%;
+          bottom: 16%;
         }
       }
     }
   }
 }
 // Tablets
-@media only screen and (min-device-width: 736px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .frenchie{
+@media only screen and (min-device-width: 736px) and (max-device-width: 992px) and (-webkit-min-device-pixel-ratio: 1) {
+  .friends{
     .product{
+      .content{
+        margin-left: -15px;
+      }
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 19%;
+          bottom: 18.5%;
         }
       }
     }
   }
 }
 @media only screen and (min-device-width: 992px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .frenchie{
+  .friends{
     .product{
+      .content{
+        margin-left: -15px;
+      }
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 21.5%;
+          bottom: 18.5%;
         }
       }
     }
@@ -132,12 +153,15 @@
 }
 // Tablets - iPad Pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
-  .frenchie{
+  .friends{
     .product{
+      .content{
+        margin-left: -60px;
+      }
       .thumbnail{
         .productSnapshot{
           display: block;
-          bottom: 21.5%;
+          bottom: 20.5%;
         }
       }
     }

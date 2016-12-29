@@ -58,24 +58,26 @@ export default class Frenchie extends Component {
         // ];
         return (
           <IndexLink to={'frenchie/' + productDetails.Name} className={styles.product} key={productDetails.Id} data={productDetails}>
-            <Col xs={12} sm={6} md={4} >
-              <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
-                <br/>
-                <span>
-                  {productDetails.Name}
-                </span>
-                <br/>
-                <span>
-                  ${productDetails.Price}
-                </span>
-                <br/>
-                <br/>
-                <div className={styles.productSnapshot}>
+            <div className={styles.content}>
+              <Col xs={18} sm={6} md={4} >
+                <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
                   <br/>
-                  <p>Quick Shop</p>
-                </div>
-              </Thumbnail>
-            </Col>
+                  <span>
+                    {productDetails.Name}
+                  </span>
+                  <br/>
+                  <span>
+                    ${productDetails.Price}
+                  </span>
+                  <br/>
+                  <br/>
+                  <div className={styles.productSnapshot}>
+                    <br/>
+                    <p>Quick Shop</p>
+                  </div>
+                </Thumbnail>
+              </Col>
+            </div>
           </IndexLink>
         );
       });
@@ -83,14 +85,11 @@ export default class Frenchie extends Component {
     return (
       <div className={styles.frenchie}>
         <Helmet title="Frenchie's Closet"/>
-        <div className="container">
-          <Helmet title="Frenchie's Closet"/>
           <Grid className="container-fluid">
             <Row className="show-grid">
                 {productsList}
             </Row>
           </Grid>
-        </div>
       </div>
     );
   }

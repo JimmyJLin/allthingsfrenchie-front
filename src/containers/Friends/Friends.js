@@ -22,8 +22,8 @@ export default class Friends extends Component {
     const styles = require('./Friends.scss');
 
     const {products} = this.props;
-    const frenchieData = products.filter(product => product.product_type === 'friends');
-    const productData = frenchieData;
+    const friendsData = products.filter(product => product.product_type === 'friends');
+    const productData = friendsData;
     let productsList;
     if (productData === null || productData.length === 0 || typeof productData === 'undefined') {
       productsList = <h3>No Proucts loaded</h3>;
@@ -58,24 +58,26 @@ export default class Friends extends Component {
         // ];
         return (
           <IndexLink to={'friends/' + productDetails.Name} className={styles.product} key={productDetails.Id} data={productDetails}>
-            <Col xs={12} sm={6} md={4} >
-              <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
-                <br/>
-                <span>
-                  {productDetails.Name}
-                </span>
-                <br/>
-                <span>
-                  ${productDetails.Price}
-                </span>
-                <br/>
-                <br/>
-                <div className={styles.productSnapshot}>
+            <div className={styles.content}>
+              <Col xs={18} sm={6} md={4}>
+                <Thumbnail className={styles.thumbnail} src={productDetails.Thumbnail} alt={productDetails.Name} >
                   <br/>
-                  <p>Quick Shop</p>
-                </div>
-              </Thumbnail>
-            </Col>
+                  <span>
+                    {productDetails.Name}
+                  </span>
+                  <br/>
+                  <span>
+                    ${productDetails.Price}
+                  </span>
+                  <br/>
+                  <br/>
+                  <div className={styles.productSnapshot}>
+                    <br/>
+                    <p>Quick Shop</p>
+                  </div>
+                </Thumbnail>
+              </Col>
+            </div>
           </IndexLink>
         );
       });
@@ -83,15 +85,12 @@ export default class Friends extends Component {
     return (
       <div className={styles.friends}>
         <Helmet title="Friends's Closet"/>
-        <div className="container">
-          <h1>Friend's Closet Content Goes Here!</h1>
-          <Helmet title="Friend's Closet"/>
-          <Grid className="container-fluid">
-            <Row className="show-grid">
-                {productsList}
-            </Row>
-          </Grid>
-        </div>
+        <h1>Friend's Closet Content Goes Here!</h1>
+        <Grid className="container-fluid">
+          <Row className="show-grid">
+            {productsList}
+          </Row>
+        </Grid>
       </div>
     );
   }
