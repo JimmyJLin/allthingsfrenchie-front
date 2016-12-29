@@ -20,7 +20,7 @@ export default class Cards extends Component {
     // console.log('currentProuct', currentProuct);
 
     return (
-      <div className="container-fluid">
+      <div className="container">
         <Card
           product_id={currentProuct[0].product_id}
           product_name={currentProuct[0].product_name}
