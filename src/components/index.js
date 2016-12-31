@@ -17,3 +17,4 @@ export Message from './Message/Message';
 export Card from './Card/Card';
 export Instagram from './Instagram/Instagram';
 export Jumbotron from './Jumbotron/Jumbotron';
+export Products from './Products/Products';

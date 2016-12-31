@@ -1,4 +1,4 @@
-.friends{
+.products{
 
   .product{
     .thumbnail{
@@ -55,7 +55,7 @@
 /* Mobile & Tablet @media imports - starts */
 // iPhone 4
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  .friends{
+  .products{
     .product{
       .content{
         margin-left: 15px;
@@ -71,7 +71,7 @@
 }
 // iPhone 5 & 5S
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  .friends{
+  .products{
     .product{
       .content{
         margin-left: 15px;
@@ -88,7 +88,7 @@
 }
 // iPhone 6 & 6S
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  .friends{
+  .products{
     .product{
       .content{
         margin-left: 15px;
@@ -105,7 +105,7 @@
 }
 // iPhone 6plus
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
-  .friends{
+  .products{
     .product{
       .content{
         margin-left: 15px;
@@ -122,7 +122,7 @@
 }
 // Tablets
 @media only screen and (min-device-width: 736px) and (max-device-width: 992px) and (-webkit-min-device-pixel-ratio: 1) {
-  .friends{
+  .products{
     .product{
       .content{
         margin-left: -15px;
@@ -137,7 +137,7 @@
   }
 }
 @media only screen and (min-device-width: 992px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .friends{
+  .products{
     .product{
       .content{
         margin-left: -15px;
@@ -153,7 +153,7 @@
 }
 // Tablets - iPad Pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
-  .friends{
+  .products{
     .product{
       .content{
         margin-left: -60px;
