@@ -46,9 +46,9 @@ export default class Footer extends Component {
               <p>Follow Us</p>
               <Col xs={10} sm={12} md={8} xsOffset={3} smOffset={2} mdOffset={3}>
                 <div className={styles.social_media_icons}>
-                  <a href="#" target="_blank"><img src={facebookIcon} alt="facebook icon"/></a>
-                  <a href="#" target="_blank"><img src={instagram} alt="instagram icon"/></a>
-                  <a href="#" target="_blank"><img src={pinterest} alt="pinterest icon"/></a>
+                  <a href="https://www.facebook.com/allthingsfrenchie.shop/" target="_blank"><img src={facebookIcon} alt="facebook icon"/></a>
+                  <a href="https://www.instagram.com/allthingsfrenchie_shop/" target="_blank"><img src={instagram} alt="instagram icon"/></a>
+                  <a href="https://www.pinterest.com/frenchie_shop/" target="_blank"><img src={pinterest} alt="pinterest icon"/></a>
                 </div>
               </Col>
             </Col>
