@@ -77,12 +77,16 @@ export default class App extends Component {
                 <LinkContainer to="/toast">
                   <NavItem eventKey={4}>Frenchie's Toast</NavItem>
                 </LinkContainer>
-
               </Nav>
               <Nav navbar pullRight>
-                <LinkContainer to="/profile">
+                <LinkContainer to="/user/login">
                   <NavItem eventKey={1}>
-                    <i className="glyphicon glyphicon-user"/>
+                    Sign In
+                  </NavItem>
+                </LinkContainer>
+                <LinkContainer to="/shopping-cart">
+                  <NavItem eventKey={2}>
+                    <i className="glyphicon glyphicon-shopping-cart"/>
                   </NavItem>
                 </LinkContainer>
               </Nav>

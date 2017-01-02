@@ -8,6 +8,7 @@ import {
     Widgets,
     About,
     Login,
+    Signup,
     LoginSuccess,
     Survey,
     NotFound,
@@ -17,7 +18,8 @@ import {
     Toast,
     Profile,
     Instagram,
-    Cards
+    Cards,
+    ShoppingCart
   } from 'containers';
 
 export default (store) => {
@@ -54,7 +56,7 @@ export default (store) => {
 
       { /* Routes */ }
       <Route path="about" component={About}/>
-      <Route path="login" component={Login}/>
+      {/* <Route path="login" component={Login}/> */}
       <Route path="pagination" component={Pagination}/>
       <Route path="survey" component={Survey}/>
       <Route path="widgets" component={Widgets}/>
@@ -65,8 +67,11 @@ export default (store) => {
       <Route path="friends" component={Friends}/>
       <Route path="friends/:name" component={Cards}/>
       <Route path="toast" component={Toast}/>
-      <Route path="profile" component={Profile}/>
+      <Route path="user/profile" component={Profile}/>
+      <Route path="user/login" component={Login}/>
+      <Route path="user/signup" component={Signup}/>
       <Route path="atfcommunity" component={Instagram}/>
+      <Route path="shopping-cart" component={ShoppingCart}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

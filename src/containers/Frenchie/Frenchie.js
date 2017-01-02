@@ -23,13 +23,13 @@ export default class Frenchie extends Component {
     return (
       <div>
         <Helmet title="Frenchie's Closet"/>
-          <Grid className="container-fluid">
-            <Row className="show-grid">
-              <Products
-                productsList={productData}
-              />
-            </Row>
-          </Grid>
+        <Grid className="container-fluid">
+          <Row className="show-grid">
+            <Products
+              productsList={productData}
+            />
+          </Row>
+        </Grid>
       </div>
     );
   }
