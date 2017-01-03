@@ -29,11 +29,23 @@
 /* Mobile & Tablet @media imports - starts */
 // iPhone 4
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-
+  .app{
+    .navbar{
+      img{
+        width: 190px;
+      }
+    }
+  }
 }
 // iPhone 5 & 5S
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-
+  .app{
+    .navbar{
+      img{
+        width: 190px;
+      }
+    }
+  }
 }
 // iPhone 6 & 6S
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {

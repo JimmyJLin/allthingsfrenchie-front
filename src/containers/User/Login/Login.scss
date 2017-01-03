@@ -1,13 +1,277 @@
+@import "../../../theme/variables.scss";
+
 .loginPage {
-  input {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  font-size: 85%;
+
+  h1{
+    margin: 0 0 20px;
+    text-align: center;
+    border: none;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    line-height: 24px;
   }
-  form {
-    margin: 30px 0;
-    :global(.btn) {
-      margin-left: 10px;
+  p{
+    margin: 0;
+    padding: 0 0 28px;
+    text-align: center;
+    color: $font-color;
+  }
+  .formContainerSignIn, .formContainerSignUp{
+    padding: 0 9%;
+    min-height: 300px;
+    margin: 0;
+    border: none;
+  }
+  .formContainerSignUp{
+    border-left: 1px solid #aaa;
+  }
+  .form{
+    label{
+      color: $font-color;
+      text-align: center;
+      letter-spacing: 0;
+      text-transform: none;
+      margin-bottom: 4px;
+      line-height: 1.4;
+      padding-bottom: 0;
+    }
+    input{
+      border-style: solid;
+      border-width: 1px;
+      border-color: #aaa;
+      box-shadow: none;
+      display: block;
+      font-size: .6875rem;
+      margin: 0 0 1rem;
+      padding: .5rem;
+      height: 2.125rem;
+      margin: 0 0 1rem;
+      padding: .5rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button{
+      min-height: 44px;
+      margin-left: 0;
+      width: 100%;
+      background-color: #222;
+      cursor: pointer;
+      display: block;
+      font-weight: 700;
+      margin: 0;
+      text-decoration: none;
+      border: 1px solid #222;
+      transition: none;
+      border-radius: 0;
+    }
+    button:hover{
+      background: #fff;
+      color: #222;
+      border: 1px solid #222;
+    }
+    p{
+      width: 100%;
     }
   }
 }
+
+/* Mobile & Tablet @media imports - starts */
+// iPhone 4
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .loginPage{
+    h1{
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 1px solid #aaa;
+    }
+    p{
+      text-align: left;
+    }
+    .formContainerSignIn, .formContainerSignUp{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .formContainerSignUp{
+      border-left: 0;
+    }
+    .form{
+      width: 100%;
+      button{
+        width: 100%;
+      }
+      p{
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 15%;
+      }
+    }
+  }
+}
+// iPhone 5 & 5S
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .loginPage{
+    h1{
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 1px solid #aaa;
+    }
+    p{
+      text-align: left;
+    }
+    .formContainerSignIn, .formContainerSignUp{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .formContainerSignUp{
+      border-left: 0;
+    }
+    .form{
+      width: 100%;
+      button{
+        width: 100%;
+      }
+      p{
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 15%;
+      }
+    }
+  }
+}
+// iPhone 6 & 6S
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .loginPage{
+    h1{
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 1px solid #aaa;
+    }
+    p{
+      text-align: left;
+    }
+    .formContainerSignIn, .formContainerSignUp{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .formContainerSignUp{
+      border-left: 0;
+    }
+    .form{
+      width: 100%;
+      button{
+        width: 100%;
+      }
+      p{
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 15%;
+      }
+    }
+  }
+}
+// iPhone 6plus
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .loginPage{
+    h1{
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 1px solid #aaa;
+    }
+    p{
+      text-align: left;
+    }
+    .formContainerSignIn, .formContainerSignUp{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .formContainerSignUp{
+      border-left: 0;
+    }
+    .form{
+      width: 100%;
+      button{
+        width: 100%;
+      }
+      p{
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 15%;
+      }
+    }
+  }
+}
+// Tablets
+@media only screen and (min-device-width: 736px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .loginPage{
+    margin: 0;
+    padding: 0;
+    h1{
+      font-weight: bold;
+    }
+    p{
+      text-align: center;
+    }
+    .formContainerSignIn, .formContainerSignUp{
+      padding-left: 15%;
+      padding-right: 10%;
+    }
+    .formContainerSignUp{
+      border-left: 0;
+      border-left: 1px solid #aaa;
+    }
+    .formContainerSignIn{
+      padding-left: 8% !important;
+    }
+    .form{
+      width: 100%;
+      button{
+        width: 100%;
+      }
+      p{
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 15%;
+      }
+    }
+  }
+}
+// Tablets - iPad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .loginPage{
+    margin: 0;
+    padding: 0;
+    h1{
+      font-weight: bold;
+    }
+    p{
+      text-align: center;
+    }
+    .formContainerSignIn, .formContainerSignUp{
+      padding-left: 15%;
+      padding-right: 10%;
+    }
+    .formContainerSignUp{
+      border-left: 0;
+      border-left: 1px solid #aaa;
+    }
+    .form{
+      width: 100%;
+      button{
+        width: 100%;
+      }
+      p{
+        text-align: center;
+        width: 100%;
+        padding-top: 5%;
+        padding-bottom: 15%;
+      }
+    }
+  }
+}
+/* Mobile & Tablet @media imports - ends */
