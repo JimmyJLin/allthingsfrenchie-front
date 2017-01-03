@@ -50,7 +50,6 @@
         "NODE_PATH": "./src",
         "NODE_ENV": "development",
         "PORT": 3000,
-        "APIPORT": 3030,
         "APIHOST": "api-allthingsfrenchie.herokuapp.com/api"
       }
     },
@@ -59,8 +58,7 @@
       "env": {
         "UV_THREADPOOL_SIZE": 100,
         "NODE_PATH": "./src",
-        "PORT": 3000,
-        "APIPORT": 3030
+        "PORT": 3000
       }
     },
     "build": {

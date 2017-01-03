@@ -21,15 +21,14 @@ export default class Login extends Component {
     event.preventDefault();
     const email = this.refs.email;
     const password = this.refs.password;
-    this.props.login(email.value);
-    this.props.login(password.value);
+    this.props.login(email.value, password.value);
     email.value = '';
     password.value = '';
   }
 
   render() {
     const styles = require('./Login.scss');
-    const {user} = this.props;
+    // const {user} = this.props;
     return (
       <div className={styles.loginPage}>
         <Helmet title="Login"/>
@@ -39,7 +38,6 @@ export default class Login extends Component {
               <div className={styles.formContainerSignIn}>
                 <h1>SIGN IN</h1>
                 <p>For returning customers.</p>
-                {!user &&
                   <div className={styles.form}>
                     <form onSubmit={this.handleSubmit}>
                       <div className="form-group">
@@ -61,7 +59,6 @@ export default class Login extends Component {
                       </Col>
                     </form>
                   </div>
-                }
               </div>
               {/* {user &&
                 <div>
@@ -77,21 +74,21 @@ export default class Login extends Component {
                 <h1>SIGN UP</h1>
                 <p>Create an account to expedite future checkouts, receive emails, discounts and special offers.</p>
                 <div className={styles.form}>
-                  <form onSubmit={this.handleSubmit}>
+                  <form onSubmit={this.handleSignupSubmit}>
                     <div className="form-group">
                       <label htmlFor="inputEmail">Email</label>
-                      <input type="text" ref="email" className="form-control"/>
+                      <input type="text" ref="signupEmail" className="form-control"/>
                     </div>
                     <div className="form-group">
                       <label htmlFor="inputPassword">Password</label>
-                      <input type="password" ref="password" className="form-control"/>
+                      <input type="password" ref="signuPassword" className="form-control"/>
                     </div>
                     <div className="form-group">
                       <label htmlFor="inputConfirmPassword">Confirm Password</label>
                       <input type="password" ref="confirmPassword" className="form-control"/>
                     </div>
                     <Col xs={12} sm={12} md={12}>
-                      <button className="btn btn-success" onClick={this.handleSubmit}>
+                      <button className="btn btn-success" onClick={this.handleSignupSubmit}>
                         Sign Up
                       </button>
                     </Col>

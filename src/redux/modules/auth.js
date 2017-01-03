@@ -80,14 +80,14 @@ export function isLoaded(globalState) {
 export function load() {
   return {
     types: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
-    promise: (client) => client.get('/loadAuth')
+    promise: (client) => client.get('/auth/login')
   };
 }
 
 export function login(email, password) {
   return {
     types: [LOGIN, LOGIN_SUCCESS, LOGIN_FAIL],
-    promise: (client) => client.post('/login', {
+    promise: (client) => client.post('/auth/login', {
       data: {
         email: email,
         password: password
@@ -99,6 +99,6 @@ export function login(email, password) {
 export function logout() {
   return {
     types: [LOGOUT, LOGOUT_SUCCESS, LOGOUT_FAIL],
-    promise: (client) => client.get('/logout')
+    promise: (client) => client.get('/auth/logout')
   };
 }
