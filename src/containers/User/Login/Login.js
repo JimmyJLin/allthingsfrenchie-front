@@ -14,6 +14,7 @@ export default class Login extends Component {
   static propTypes = {
     user: PropTypes.object,
     login: PropTypes.func,
+    signup: PropTypes.func,
     logout: PropTypes.func
   }
 
@@ -26,6 +27,14 @@ export default class Login extends Component {
     password.value = '';
   }
 
+  handleSignupSubmit = (event) => {
+    event.preventDefault();
+    const email = this.refs.signupEmail;
+    const password = this.refs.signupPassword;
+    this.props.signup(email.value, password.value);
+    email.value = '';
+    password.value = '';
+  }
   render() {
     const styles = require('./Login.scss');
     // const {user} = this.props;
@@ -53,21 +62,13 @@ export default class Login extends Component {
                           Sign In
                         </button>
                         <br/>
-                        <IndexLink to="#">
+                        <IndexLink to="/user/reset-password">
                           <p>Forgot Your Password?</p>
                         </IndexLink>
                       </Col>
                     </form>
                   </div>
               </div>
-              {/* {user &&
-                <div>
-                  <p>You are currently logged in as {user.name}.</p>
-                  <div>
-                    <button className="btn btn-danger" onClick={logout}><i className="fa fa-sign-out"/>{' '}Log Out</button>
-                  </div>
-                </div>
-              } */}
             </Col>
             <Col xs={12} sm={6} md={6}>
               <div className={styles.formContainerSignUp}>
@@ -81,12 +82,12 @@ export default class Login extends Component {
                     </div>
                     <div className="form-group">
                       <label htmlFor="inputPassword">Password</label>
-                      <input type="password" ref="signuPassword" className="form-control"/>
+                      <input type="password" ref="signupPassword" className="form-control"/>
                     </div>
-                    <div className="form-group">
+                    {/* <div className="form-group">
                       <label htmlFor="inputConfirmPassword">Confirm Password</label>
                       <input type="password" ref="confirmPassword" className="form-control"/>
-                    </div>
+                    </div> */}
                     <Col xs={12} sm={12} md={12}>
                       <button className="btn btn-success" onClick={this.handleSignupSubmit}>
                         Sign Up

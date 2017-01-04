@@ -8,7 +8,7 @@ import {
     Widgets,
     About,
     Login,
-    Signup,
+    ResetPass,
     LoginSuccess,
     Survey,
     NotFound,
@@ -69,7 +69,7 @@ export default (store) => {
       <Route path="toast" component={Toast}/>
       <Route path="user/profile" component={Profile}/>
       <Route path="user/login" component={Login}/>
-      <Route path="user/signup" component={Signup}/>
+      <Route path="user/reset-password" component={ResetPass}/>
       <Route path="atfcommunity" component={Instagram}/>
       <Route path="shopping-cart" component={ShoppingCart}/>
 

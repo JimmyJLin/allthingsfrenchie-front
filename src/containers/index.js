@@ -14,7 +14,7 @@ export Friends from './Friends/Friends';
 export Toast from './Toast/Toast';
 export Profile from './User/Profile/Profile';
 export Login from './User/Login/Login';
-export Signup from './User/Signup/Signup';
+export ResetPass from './User/ResetPass/ResetPass';
 export Cards from './Cards/Cards';
 export Instagram from './Instagram/Instagram';
 export ShoppingCart from './ShoppingCart/ShoppingCart';
